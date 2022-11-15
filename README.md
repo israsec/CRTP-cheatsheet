@@ -255,6 +255,15 @@ Get-NetGPO -GPOname "{<gplink>}"
 ```
 
 ## Powerview ACL
+A short explanation about what to look for in an ACL. There are 3 primary fields to focus on.
+
+**ObjectDN** - This is the name of the object.
+
+**IdentityReference** - This is the group that has rights over said object.
+
+**ActiveDirectoryRights** - These are the actual rights themselves.
+
+
 #### Get the ACL's associated with the specified object
 ```
 Get-ObjectACL -SamAccountName <accountname> -ResolveGUIDS
