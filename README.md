@@ -323,10 +323,11 @@ Get-NetForestDomain -Verbose | Get-NetDomainTrust
 
 ## Misc
 ####  Powerview Find all machines on the current domain where the current user has local admin access
+***Important!***
 ```
 Find-LocalAdminAccess -Verbose
 ```
-
+*In case RPC and SMB ports (used by Find-LocalAdminAcess) are blocked then try the following.*
 ```
 . ./Find-WMILocalAdminAccess.ps1
 Find-WMILocalAdminAccess
