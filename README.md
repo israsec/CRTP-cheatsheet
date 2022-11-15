@@ -294,6 +294,7 @@ Invoke-ACLScanner | Where-Object {$_.IdentityReference –eq [System.Security.Pr
 #### Get a list of all the domain trusts for the current domain
 ```
 Get-NetDomainTrust
+Get-NetDomainTrust -Domain <domain-to-check>
 ```
 
 #### Get details about the forest
