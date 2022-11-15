@@ -121,9 +121,12 @@ Get-NetUser | select samaccountname, lastlogon, pwdlastset | Sort-Object -Proper
 Get-NetUser | select samaccountname, memberof
 ```
 
-#### Get list of all properties for users in the current domain
+#### Check the password last set  and bad password count for users in the current domain
+
+*This is useful to discover honeypot accounts!*
 ```
-get-userproperty -Properties pwdlastset
+Get-UserProperty -Properties pwdlastset
+Get-UserProperty -Properties badpwdcount
 ```
 
 #### Get descripton field from the user
