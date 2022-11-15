@@ -137,6 +137,8 @@ Get-netuser | Select-Object samaccountname,description
 ```
 
 #### Get computer information
+
+*A computer here refers to a computer type object in the domain. It does not necessarily refer to a real machine of this name.*
 ```
 Get-NetComputer
 Get-NetComputer -FullData
@@ -154,6 +156,7 @@ Get-NetComputer -fulldata | select samaccountname, operatingsystem, operatingsys
 ```
 
 #### List all groups of the domain
+*If you are in a "sub" domain within the forest (ie dollarcorp.moneycorp.local) then this will only show groups in your domain. To show the groups (like enterprise admins) in the domain above you would need to also specify the -Domain ie (-Domain moneycorp.local).*
 ```
 Get-NetGroup
 Get-NetGroup -GroupName *admin*
