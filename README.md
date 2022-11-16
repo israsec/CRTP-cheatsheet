@@ -358,6 +358,7 @@ Enter-PSSession $sess
 ```
 Invoke-UserHunter
 Invoke-UserHunter -Groupname "RDPUsers"
+Invoke-UserHunter -Stealth #this only checks against high value targets, DC, fileshares and the like
 ```
 
 ####  Find active sessions of domain admins
